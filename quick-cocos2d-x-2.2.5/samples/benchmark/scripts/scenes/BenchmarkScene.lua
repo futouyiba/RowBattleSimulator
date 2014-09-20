@@ -106,6 +106,7 @@ function BenchmarkScene:onEnterFrame(dt)
         local coin = coins[i]
         coin:onEnterFrame(dt)
     end
+    print("1")
 end
 
 function BenchmarkScene:onEnter()
