@@ -14,6 +14,10 @@ function MainScene:ctor()
 		return self:refresh(dt)
 		end)
 	self:scheduleUpdate()
+	itemStats={hp={pct=0,value=0,number=0,result=0}}
+	for k,v in pairs(itemStats) do
+		print(k)
+	end
 end
 
 function MainScene:onEnter()
@@ -23,7 +27,7 @@ function MainScene:onExit()
 end
 
 function MainScene:refresh(dt)
-	print("1")
+--	print("1")
 --	a1:updateFrame(dt)
 end
 
