@@ -1,3 +1,5 @@
+require("/app/scenes/csv.lua")
+
 ref={"hp","att","def","ctRtLv","ctDgLv","dgRtLv","dgDgLv","precs","penetr","tough","armor","weapon","chasis","engine","tyre"}
 refRev={hp=1,att=2,def=3,ctRtLv=4,ctDgLv=5,dgRtLv=6,dgDgLv=7,precs=8,penetr=9,tough=10}
 armor,weapon,chasis,engine,tyre=11,12,13,14,15
@@ -99,6 +101,13 @@ function MainScene:ctor()
         label.pct[a]:setString((maxStats[ref[a]].pct*100).."%")
         label.value[a]:setString(maxStats[ref[a]].number)
         label.result[a]:setString(maxStats[ref[a]].result)
+    end
+    csvTestTable=LoadCsv("F:/RowBattleSimulator/quick-cocos2d-x-2.2.5/bin/statoptimizer/res/csvtest.csv")
+    print(csvTestTable)
+    for k,v in pairs(csvTestTable) do
+        for i,j in pairs(v) do
+            print(j)
+        end
     end
 end
 
